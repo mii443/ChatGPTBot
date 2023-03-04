@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'codes.mii'
-version = '1.0-SNAPSHOT'
+version = '1.0'
 compileJava.options.encoding = 'UTF-8'
 compileTestJava.options.encoding = 'UTF-8'
 javadoc.options.encoding = 'UTF-8'
