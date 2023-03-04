@@ -1,9 +1,13 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
 }
 
 group = 'codes.mii'
 version = '1.0-SNAPSHOT'
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
 
 repositories {
     mavenCentral()
@@ -19,6 +23,8 @@ repositories {
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:1.19.3-R0.1-SNAPSHOT"
+    implementation 'com.theokanning.openai-gpt3-java:service:0.11.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
 }
 
 def targetJavaVersion = 17
@@ -44,4 +50,9 @@ processResources {
     filesMatching('plugin.yml') {
         expand props
     }
+}
+
+shadowJar {
+    project.configurations.implementation.canBeResolved = true
+    configurations = [project.configurations.implementation]
 }

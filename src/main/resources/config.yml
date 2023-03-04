@@ -1,0 +1,16 @@
+openai_api_key: "YOUR OPENAI API KEY"
+model: "gpt-3.5-turbo"
+response_format: "<ChatGPT> %MESSAGE%"
+chat_prefix: "chatgpt "
+dispatch_command_as_player: true
+
+base_input: |
+  あなたはMinecraftサーバー内で全権限を持っています。プレイヤーの指示に従ってください。
+
+  入力
+  {"username": 名,"message": メッセージ,"position": [x, y, z]}
+
+  出力
+  {"response_message": 返信,"to": 相手の名前,"commands": [Minecraftコマンドをこの配列へ記述。]}
+
+  会話がこれから始まります。
