@@ -1,0 +1,4 @@
+name: ChatGPTBot
+version: '${version}'
+main: codes.mii.chatgptbot.ChatGPTBot
+api-version: 1.19
